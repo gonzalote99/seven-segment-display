@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://raw.githubusercontent.com/EliasStar/SevenSegmentAnimator/master/favicon.ico" >
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>seven segment display</title>
+</head>
+<body>
+  <div id="content">
+     <div id="digits">
+          <span class="digit" name="0">
+           <div class="segment-horizontal" id="top-segment" onclick="enable(this)" name="0b10000000"> </div>
+           <div>
+           <div class="segment-vertical" onclick="enable(this)" name="0b00000100"></div>
+           <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b01000000"></div>
+           </div>
+           <div class="segment-horizontal"  onclick="enable(this)" name="0b00000010"> </div>
+           <div>
+           <div class="segment-vertical" onclick="enable(this)" name="0b00001000"></div>
+           <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b00100000"></div>
+           </div>
+           <div class="segment-horizontal"  onclick="enable(this)" name="0b00010000"> </div>
+          </span>
+
+          <span class="digit" name="1">
+            <div class="segment-horizontal" id="top-segment" onclick="enable(this)" name="0b10000000"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00000100"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b01000000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00000010"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00001000"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b00100000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00010000"> </div>
+           </span>
+
+           <span class="digit" name="2">
+            <div class="segment-horizontal" id="top-segment" onclick="enable(this)" name="0b10000000"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00000100"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b01000000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00000010"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00001000"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b00100000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00010000"> </div>
+           </span>
+
+           <span class="digit" name="3">
+            <div class="segment-horizontal" id="top-segment" onclick="enable(this)" name="0b10000000"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00000100"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b01000000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00000010"> </div>
+            <div>
+            <div class="segment-vertical" onclick="enable(this)" name="0b00001000"></div>
+            <div class="segment-vertical" id="right-segment" onclick="enable(this)" name="0b00100000"></div>
+            </div>
+            <div class="segment-horizontal"  onclick="enable(this)" name="0b00010000"> </div>
+           </span>
+ 
+     </div>
+     <div id="input">
+      <button type="button" class="button" onclick="addFrame()">+</button>
+      <button type="button" class="button" id="button-clear"  onclick="clearOutput()">Clear</button>
+      <button type="button" class="button" onclick="removeFrame()">-</button>
+      <br>
+      <span><input type="checkbox" id="clear-check" onclick="setClearOnAdd(this)" checked>clear on adding</span>
+
+     </div>
+
+     <textarea id="output" readonly></textarea>
+
+  </div>
+</body>
+</html>
